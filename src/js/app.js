@@ -39,7 +39,8 @@ App = {
     var content = $("#content");
 
     loader.show();
-    content.hide();
+    //content.hide();
+    content.show();
 
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
@@ -67,11 +68,11 @@ App = {
           var voteCount = candidate[2];
 
           // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
+          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>";
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option
-          var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
+          var candidateOption = "<option value='" + id + "' >" + name + "</ option>";
           candidatesSelect.append(candidateOption);
         });
       }
