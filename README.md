@@ -35,6 +35,7 @@ You must migrate the election smart contract each time your restart ganache.
 Visit this URL in your browser: http://localhost:3000
 
 # Useful Commands:
+```
 truffle migrate
 truffle console
 .exit
@@ -43,5 +44,6 @@ Election.deployed().then(function(i) { app=i })
 app.candidates(1).then(function(c){ candidate = c; })
 candidate[0]
 candidate[0].toNumber()
- web3.eth.getAccounts().then(function(e) { acc = e[0]; })
+web3.eth.getAccounts().then(function(e) { acc = e[0]; })
 app.vote(1, { from: acc })
+```
